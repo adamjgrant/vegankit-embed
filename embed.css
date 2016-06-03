@@ -1,0 +1,19 @@
+#vegankit-embed {
+  display: block;
+  margin: 15px auto;
+  width: 225px;
+}
+
+#vegankit-embed .vegankit-embed-logo {
+  display: block;
+  width: 50%;
+  margin: 0px auto;
+  margin-bottom: 5px;
+}
+
+#vegankit-embed .vegankit-embed-links {
+  background-image: url("http://cdn.everything.io/vegankit/embed/outlines.png");
+  height: 30px;
+  width: 100%;
+  background-size: 100% 100%;
+}

@@ -1,0 +1,18 @@
+.modal .step1.inactive,
+.modal .step2 {
+  display: none;
+}
+
+.modal .step2.active {
+  display: block;
+}
+
+.modal textarea {
+  width: 100%;
+  font-size: 12px;
+  font-family: monospace;
+}
+
+input.error {
+  border-color: red;
+}

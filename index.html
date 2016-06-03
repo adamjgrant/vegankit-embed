@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="stylesheet" href="http://cdn.everything.io/kickstart/3.x/css/kickstart.min.css" />
+    <link rel="stylesheet" href="code_generator.css" />
+    <style>
+      textarea {
+        font-family: monospace;
+        font-size: 12px;
+        height: 120px;
+      }
+      .row {
+        margin-bottom: 25px;
+      }
+    </style>
+    <script>var local = !location.host.length;</script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>VeganKit.com Activist Badge</h1>
+      <div class="row">
+        <div class="col-twothirds">
+          <p>
+            Together, VeganKit can educate the world about the importance of
+            veganism, and how easy it actually is to go vegan. But we can't do it
+            without <em>activists and educators like you.</em>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-twothirds">
+          <p>
+            Announcing the VeganKit Activist Badge. Add this one little snippet of
+            code to your site and we'll keep track of how many of your website
+            visitors you've referred to VeganKit.
+          </p>
+          <p>
+            Simply click the button to generate the code. This will include your
+            chosen username that will appear on our activist leaderboard.
+          </p>
+          <a id="get_code" class="button button-primary button-large" href="#">Get the code</a>
+        </div>
+        <div class="col-third">
+          <div id="vegankit-embed">
+            <script async src="embed.js"></script>
+          </div>
+          <p><small>Above: The actual embed</small></p>
+        </div>
+    </div>
+    <div id="code_generator" class="modal">
+      <header>
+        <h1>Get the code</h1>
+      </header>
+      <main class="step1">
+        <div class="form_group">
+          <label>Choose a username</label>
+          <input type="text" id="username"/>
+        </div>
+        <p>
+          This is the name that will appear on the leaderboard for the number
+          of visitors to your site who click on your activist badge.
+        </p>
+      </main>
+      <footer class="step1">
+        <button class="button button-primary" id="next">Generate Code</button>
+      </footer>
+      <main class="step2">
+        <textarea onclick="this.select()" id="generated_code"></textarea>
+        <p>Done! Now just copy and paste this anywhere on your site.</p>
+        <p>When your visitors click on your badge, we'll give you a point for each unique person.</p>
+      </main>
+      <footer class="step2">
+        <ul>
+          <li>
+            <button class="button" id="back">Back</button>
+          </li>
+          <li>
+            <button class="button button-primary" id="done">Done</button>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <script src="http://cdn.everything.io/kickstart/3.x/js/kickstart.min.js"></script>
+    <script src="code_generator.js"></script>
+  </body>
+</html>

@@ -1,23 +1,33 @@
 (function() {
-  var embed = document.getElementById("vegankit-embed"),
+  var embed = document.currentScript,
       embedContent = document.createElement("div"),
       cdnPath = "http://cdn.everything.io/vegankit/embed/",
+      vegankit_activist_username = vegankit_activist_username || "anonymous",
       body = document.body;
 
   var css = document.createElement("link");
-      css.rel = "text/css";
-      css.href = "embed.css";
+      css.rel = "stylesheet";
+      css.href = (local ? "" : cdnPath) + "embed.css";
+
+  var vegankit_link = function(page) {
+    return "<a class='vegankit-link-"
+      + page
+      + "' href='http://vegankit.com/"
+      + page + "?activist_username="
+      + vegankit_activist_username
+      + "'></a>";
+  }
 
   embedContent.innerHTML = "<img class='vegankit-embed-logo' src='" + cdnPath + "logo.png' />\
-                           <div class='vegankit-embed-links'>\
-                             <a class='vegankit-link-why' href='http://vegankit.com/why'></a>\
-                             <a class='vegankit-link-be' href='http://vegankit.com/be'></a>\
-                             <a class='vegankit-link-eat' href='http://vegankit.com/eat'></a>\
-                             <a class='vegankit-link-wear' href='http://vegankit.com/wear'></a>\
-                             <a class='vegankit-link-use' href='http://vegankit.com/use'></a>\
-                             <a class='vegankit-link-learn' href='http://vegankit.com/learn'></a>\
-                           </div>"
+                           <div class='vegankit-embed-links'>"
+                             + vegankit_link("why")
+                             + vegankit_link("be")
+                             + vegankit_link("eat")
+                             + vegankit_link("wear")
+                             + vegankit_link("use")
+                             + vegankit_link("learn")
+                           + "</div>"
 
   body.appendChild(css);
-  embed.appendChild(embedContent);
+  embed.parentNode.insertBefore(embedContent, embed.nextSibling);
 })();
