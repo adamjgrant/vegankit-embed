@@ -17,7 +17,7 @@ k$.$(".modal #next").addEventListener("click", function() {
   Array.prototype.slice.call(k$.$$(".modal .step1")).forEach(function(step) { step.classList.add("inactive"); });
   Array.prototype.slice.call(k$.$$(".modal .step2")).forEach(function(step) { step.classList.add("active"); });
 
-  k$.$(".modal textarea").innerHTML = "<div id=\"vegankit-embed\"><script>var vegankit_activist_username=\"" + username + "\";</script><script async src=\"" +
+  k$.$(".modal textarea").innerHTML = "<div id=\"vegankit-embed\"><script>var vegankit_activist_username=\"" + username + "\";</script><script async src=\""
    + "http://cdn.everything.io/vegankit/embed/embed.js\"></script></div>";
 });
 
