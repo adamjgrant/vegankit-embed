@@ -13,7 +13,7 @@
     return "<a class='vegankit-link-"
       + page
       + "' href='http://vegankit.com/"
-      + page + "?activist_username="
+      + page + "/?activist_username="
       + vegankit_activist_username
       + "'></a>";
   }
