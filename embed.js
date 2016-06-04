@@ -4,11 +4,13 @@
       cdnPath = "http://cdn.everything.io/vegankit/embed/",
       vegankit_activist_username = window.vegankit_activist_username || "anonymous",
       body = document.body,
+      style = document.createElement('style'),
       local = !location.host;
 
   var css = document.createElement("link");
       css.rel = "stylesheet";
       css.href = (local ? "" : cdnPath) + "embed.css";
+      style.innerHTML = "#vegankit-embed{display:none;}"
 
   var vegankit_link = function(page) {
     return "<a class='vegankit-link-"
@@ -32,5 +34,6 @@
                            + "</div>"
 
   body.appendChild(css);
+  body.appendChild(style);
   embed.parentNode.insertBefore(embedContent, embed.nextSibling);
 })();

@@ -6,8 +6,11 @@
   opacity: 1;
 }
 
-#vegankit-embed {
+html div#vegankit-embed {
   display: block;
+}
+
+#vegankit-embed {
   margin: 50px auto;
   width: 255px;
   background: white;

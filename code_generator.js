@@ -31,7 +31,6 @@ k$.$(".modal #done").addEventListener("click", function() {
 });
 
 var createActivistTable = function(data) {
-  console.log(data);
   var row = k$.$("template#scoreboard"),
       renderArea = k$.$("[data-render='scoreboard']"),
       activist = row.content.querySelector('.activist'),
