@@ -35,16 +35,29 @@ var createActivistTable = function(data) {
   var row = k$.$("template#scoreboard"),
       renderArea = k$.$("[data-render='scoreboard']"),
       activist = row.content.querySelector('.activist'),
+      tableContents = [],
       tbody = document.createElement('tbody'),
       score = row.content.querySelector('.score');
 
   for (key in data) {
-    var referrals = Object.keys(data[key]['referrals']).length;
-    activist.textContent = key;
-    score.textContent = referrals;
+    var record = {}
+    record.activist = key
+    record.score = Object.keys(data[key]['referrals']).length;
+    tableContents.push(record);
+  }
+  // Sort by score
+  tableContents = tableContents.sort(function(a, b) {
+    return b.score - a.score;
+  });
+
+  // Create HTML
+  tableContents.forEach(function(record) {
+    activist.textContent = record.activist;
+    score.textContent = record.score;
     var clone = document.importNode(row.content, true);
     tbody.appendChild(clone);
-  }
+  })
+
   // Done, let's put it in the table
   renderArea.innerHTML = tbody.innerHTML;
 }
