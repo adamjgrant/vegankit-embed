@@ -16,3 +16,7 @@
 input.error {
   border-color: red;
 }
+
+[data-page-type=single] .sidebar-content {
+  margin-bottom: 0;
+}
