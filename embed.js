@@ -2,8 +2,9 @@
   var embed = document.currentScript,
       embedContent = document.createElement("div"),
       cdnPath = "http://cdn.everything.io/vegankit/embed/",
-      vegankit_activist_username = vegankit_activist_username || "anonymous",
-      body = document.body;
+      vegankit_activist_username = window.vegankit_activist_username || "anonymous",
+      body = document.body,
+      local = local || false;
 
   var css = document.createElement("link");
       css.rel = "stylesheet";
