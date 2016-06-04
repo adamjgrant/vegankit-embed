@@ -19,6 +19,7 @@ k$.$(".modal #next").addEventListener("click", function() {
 
   k$.$(".modal textarea").innerHTML = "<div style=\"width: 255px\" id=\"vegankit-embed\"><script>window.vegankit_activist_username=\"" + username + "\";</script><script src=\""
    + "http://cdn.everything.io/vegankit/embed/embed.js\"></script></div>";
+  k$.$(".modal #activist-link").value = "http://vegankit.com/why/?activist_username=" + username;
 });
 
 k$.$(".modal #back").addEventListener("click", function() {
