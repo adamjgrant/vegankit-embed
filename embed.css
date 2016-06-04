@@ -4,16 +4,37 @@
   margin: 0;
   box-sizing: border-box;
   opacity: 1;
-  visibility: visible;
-  display: block;
 }
 
 #vegankit-embed {
   display: block;
-  margin: 0px auto;
+  margin: 50px auto;
   width: 255px;
   background: white;
   padding: 15px;
+  height: 58px;
+  position: relative;
+}
+
+#vegankit-embed .vegankit-embed-heading {
+  display: none;
+  text-align: center;
+  font-size: 17px;
+  margin-bottom: 6px;
+  text-transform: capitalize;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #333;
+}
+
+#vegankit-embed:hover .vegankit-embed-logo {
+  display: none;
+}
+
+#vegankit-embed a:hover .vegankit-embed-heading {
+  display: block;
 }
 
 #vegankit-embed .vegankit-embed-logo {
@@ -21,6 +42,11 @@
   width: 50%;
   margin: 0px auto;
   margin-bottom: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 26px;
 }
 
 #vegankit-embed .vegankit-embed-links {
@@ -28,6 +54,7 @@
   height: 30px;
   width: 100%;
   background-size: 100% 100%;
+  margin-top: 15px;
 }
 
 #vegankit-embed a {

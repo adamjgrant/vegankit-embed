@@ -4,7 +4,7 @@
       cdnPath = "http://cdn.everything.io/vegankit/embed/",
       vegankit_activist_username = window.vegankit_activist_username || "anonymous",
       body = document.body,
-      local = local || false;
+      local = !location.host;
 
   var css = document.createElement("link");
       css.rel = "stylesheet";
@@ -16,7 +16,9 @@
       + "' href='http://vegankit.com/"
       + page + "/?activist_username="
       + vegankit_activist_username
-      + "'></a>";
+      + "'><h1 class='vegankit-embed-heading'>"
+      + page + (page == "why" ? " vegan?" : "")
+      + "</h1></a>";
   }
 
   embedContent.innerHTML = "<img class='vegankit-embed-logo' src='" + cdnPath + "logo.png' />\
