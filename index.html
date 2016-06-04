@@ -45,6 +45,28 @@
           chosen username that will appear on our activist leaderboard.
         </p>
 
+        <h1>Leaderboard</h1>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Activist</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody data-render="scoreboard">
+            <tr>
+              <td colspan="2">Loading...</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <template id="scoreboard">
+          <tr>
+            <td class="activist"></td>
+            <td class="score"></td>
+          </tr>
+        </template>
+
       </section>
       <aside class="sidebar-content">
         <article data-component="video_box">
@@ -92,5 +114,6 @@
     </div>
     <script src="http://cdn.everything.io/kickstart/3.x/js/kickstart.min.js"></script>
     <script src="code_generator.js"></script>
+    <script src="https://vegankit-activist-badge.firebaseio.com/activists.json?callback=createActivistTable"></script>
   </body>
 </html>

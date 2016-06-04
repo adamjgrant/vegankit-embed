@@ -29,3 +29,22 @@ k$.$(".modal #back").addEventListener("click", function() {
 k$.$(".modal #done").addEventListener("click", function() {
   $modal.style.display = "none";
 });
+
+var createActivistTable = function(data) {
+  console.log(data);
+  var row = k$.$("template#scoreboard"),
+      renderArea = k$.$("[data-render='scoreboard']"),
+      activist = row.content.querySelector('.activist'),
+      tbody = document.createElement('tbody'),
+      score = row.content.querySelector('.score');
+
+  for (key in data) {
+    var referrals = Object.keys(data[key]['referrals']).length;
+    activist.textContent = key;
+    score.textContent = referrals;
+    var clone = document.importNode(row.content, true);
+    tbody.appendChild(clone);
+  }
+  // Done, let's put it in the table
+  renderArea.innerHTML = tbody.innerHTML;
+}
